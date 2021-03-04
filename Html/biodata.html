@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My Bio Data</h1>
+    <form action="biodata.html" method="POST">
+        <fieldset>
+            <legend>
+                Personal Information
+            </legend>
+            <label for="firstname">First Name:</label>
+            <input type="text" placeholder="First name" name="firstname" id="firstname" required>&nbsp;&nbsp;
+            <label for="lastname">Last Name:</label>
+            <input type="text" placeholder="Last name" name="lastname" id="lastname" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Enter Email" name="email" id="email" required><br><br>
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" placeholder="0-9" name="number" id="mobile" maxlength="10" required><br><br>
+            <label for="height">Height (in feet):</label>
+            <input type="tel" maxlength="1" placeholder="Enter height" name="height" id="height" required><br><br>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" name="date" id="dob" required><br><br>
+            City Name:
+            <select name="" id="">
+                <option >Indore</option>
+                <option >Delhi</option>
+                <option >Ujjain</option>
+                <option >Ratlam</option>
+                <option >Dewas</option>
+            </select><br><br>
+            Gender:&nbsp;&nbsp;
+            <label for="male">Male:</label>
+            <input type="radio" name="gender" id="male" required>&nbsp;&nbsp;
+            <label for="female">Female:</label>
+            <input type="radio" name="gender" id="female" required>&nbsp;&nbsp;
+            <label for="others">Others:</label>
+            <input type="radio" name="gender" id="others" required><br><br>
+            <textarea cols="70" rows="5" maxlength="120" placeholder="Describe youself in 30 words...."></textarea><br><br>
+            I agree with all terms and conditons
+            <input type="checkbox">
+        </fieldset><br><br>
+
+        <fieldset>
+            <legend>
+                Education
+            </legend>
+            <label for="collegename">College Name:</label>
+            <input type="text" placeholder="college name" name="collegename" id="collegename" required>&nbsp;&nbsp;
+            <br><br> Year:
+            <select name="" id="">
+                <option >1th</option>
+                <option >2nd</option>
+                <option >3rd</option>
+                <option >4th</option>
+            </select><br><br>
+            Stream:
+            <select name="" id="">
+                <option >CSE</option>
+                <option >IT</option>
+                <option >EC</option>
+                <option >Civil</option>
+                <option >Mechanical</option>
+            </select><br><br>
+            <label for="marksheet">Marksheet</label>
+            <input type="file" id="marksheet"> 
+        </fieldset><br><br>
+        <input type="submit" name="submit" id="submit">
+    </form>
+</body>
+</html>
