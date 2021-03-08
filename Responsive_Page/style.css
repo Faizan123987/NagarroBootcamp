@@ -1,0 +1,313 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    /* margin: auto; */
+    background-color: paleturquoise;
+}
+
+*{
+    margin:0;
+    padding: 0;
+}
+/* -------------------------------Navigation Bar------------------------------------- */
+nav{
+    background-color: black;
+    font-size: 1.2rem;
+    display: flex;
+    position: fixed;
+    overflow: auto;
+    top:0;
+    z-index: 999;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    width: 100%;
+}
+
+ul{
+    margin-left: 2%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+ 
+li{
+    color: wheat;
+    list-style: none;
+    display: inline-block;
+    padding: 15px;
+}
+li:last-of-type{
+    position: absolute;
+    right: 50px;
+}
+
+li:hover{
+    cursor: pointer;
+    border-bottom: 2px solid white;
+    transform: scale(1.3);
+}
+
+input{
+    width: 100%;
+    height: 90%;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+/* -----------------------------Images------------------------------------ */
+
+.Image{
+    height: 60vh;
+    width: 60vw;
+    margin-top: 20vh;
+    margin-left: 20vw;
+    /* overflow: hidden; */
+    background-color: aqua;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    background-size: cover;
+    background-image: url(https://images.unsplash.com/photo-1614394893144-04f459b008ee?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+    animation: slide 10s infinite;
+}
+
+@keyframes slide{
+    25%{
+        background-image: url(https://images.unsplash.com/photo-1614394893144-04f459b008ee?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+    }
+    50%{
+        background-image: url(https://images.unsplash.com/photo-1614889817091-34e8c54b8c2f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=801&q=80);
+    }
+    75%{
+        background-image: url(https://images.unsplash.com/photo-1614889817091-34e8c54b8c2f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=801&q=80);
+    }
+    80%{
+        background-image: url(https://images.unsplash.com/photo-1611081128810-438f9e604a94?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80);
+    }
+}
+
+/* --------------------------------------3d Cards------------------------------------------ */
+
+.cards div  {
+    height: 300px;
+    width: 300px;
+}
+
+.wrap img{
+    width: 100%;
+    height: 100%;
+}
+
+.front,.back{
+    position: absolute;
+    backface-visibility: visible;
+}
+
+.front{
+    background-color: chocolate;
+    z-index: 1;
+}
+
+.back{
+    background-color:wheat;
+    transform: rotateY(180deg);
+}
+
+.cards{
+    margin-top: 100px;
+    width: 100%;
+    perspective: 800px;
+    display: flex;
+    
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.wrap{
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.wrap:hover{
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+.wrap h3{
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.wrap p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* -------------------------------------footer-------------------------------------- */
+
+footer{
+    margin-top: 100px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 18px sans-serif;
+    padding: 50px 50px 60px 50px;
+    bottom: 0; 
+    height: 100%;
+    background-color: black;
+}
+
+.footer-left,.footer-right,.footer-center{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-left{
+    width: 30%;
+}
+
+footer h3{
+    font:normal 36px 'Cookie',cursive;
+    margin: 0;
+}
+
+footer h3 span{
+	color:  #e0ac1c;
+    margin-left:-20%;
+}
+
+footer .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+footer .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+footer .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+footer .footer-center{
+	width: 35%;
+}
+
+
+footer .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+footer .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+footer .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+footer .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+footer .footer-center p a{
+	color:  wheat;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+footer .footer-right{
+	width: 30%;
+}
+
+footer .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+footer .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+
+@media screen and (max-width:750px){
+
+    nav,ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    li:last-of-type{
+        position: relative;
+        right: 1%;
+        
+    }
+    input{
+        width: 100%;
+        height: 90%;
+        padding: 5px;
+        border-radius: 20px;
+        font-size: 1rem;
+    }
+    .Image{
+        margin-top: 50%;
+    }
+    
+}
+
+@media screen and (max-width:1080px){
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrap{
+        margin-top: 2%;
+    }
+
+    footer .footer-left,
+	footer .footer-center,
+	footer .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	footer .footer-center i{
+		margin-left: 0;
+	}
+}
